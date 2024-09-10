@@ -15,7 +15,7 @@ const {
 } = require("./middlewares/authentication");
 
 const app = express(); 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 10000;
 console.log(PORT);
 
 
