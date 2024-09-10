@@ -16,8 +16,6 @@ const {
 
 const app = express(); 
 const PORT = process.env.PORT || 10000;
-console.log(PORT);
-
 
 mongoose.set('strictQuery', true);
 
@@ -35,7 +33,6 @@ app.use(express.static(__dirname + '/public/'));
 
 app.get("/", async (req, res) => {
   const allBlogs = await Blog.find({});
-  console.log(req.user);
   res.render("home", {
     user: req.user,
     blogs: allBlogs,
